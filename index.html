@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="portfolio-main">
+        <!-- Header -->
+        <header>
+            <div class="container-work">
+                <nav class="nav-work">
+                    <div class="logo">
+                        <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
+                    </div>
+                    <!-- toggle bar -->
+                    <div class="toggle-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="navigation-bar">
+                        <ul>
+                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="skills.html">skills</a></li>
+                            <li><a href="work.html">my work</a></li>
+                            <li class="hire-btn"><a target="popup" href="https://resume.io/r/jfgMpOhGb">resume</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+                                
+        <!-- main content -->
+        <div class="main-content">
+            <div class="container">
+                <div class="main-content-wrapper">
+                    <div class="col-left">
+                        <h2><b>Hello there, I am Syahir Zulkifli</b><h2></span>&nbsp;&nbsp;&nbsp;
+                        <p><span class="typed-text"></span><span class="cursor"></span></p>&nbsp;&nbsp;&nbsp;
+                        <p id="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat ultricies turpis, 
+                            non vestibulum dui placerat non."</p>
+                            <span id="author">- Syahir "The Courier" Zulkifli</span>
+                                <a href="#" class="btn-main" id="btn-quote">Generate Quote<span>
+                                    <img src="assets/images/arrow-right.svg" alt="arrow"></span>
+                                </a>
+                        <a href="work.html" class="btn-main">
+                            See my work
+                            <span> <img src="assets/images/arrow-right.svg" alt="arrow"></span>
+                        </a>
+                    </div>
+                    <div class="col-right">
+                        <img src="assets/images/syahir.png" alt="Display image">
+                    </div>
+                </div>
+                
+<script>
+ const api = "https://api.quotable.io/random";
+
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const btn = document.getElementById("btn-quote");
+
+btn.addEventListener("click", getQuote);
+
+function getQuote() {
+  fetch(api)
+    .then((res) => res.json())
+    .then((data) => {
+      quote.innerHTML = `"${data.content}"`;
+      author.innerHTML = `- ${data.author}`;
+    });
+}
+    </script>
+
+                <!-- experience -->
+                <div class="experience-section">
+                    <div class="experience-inner">
+                        <div class="col">
+                            <h3>Web </h3>
+                            <p>Development</p>
+                        </div>
+                        <div class="col">
+                            <h3>Mobile App</h3>
+                            <p>Development</p>
+                        </div>
+                        <div class="col">
+                            <h3>Software</h3>
+                            <p>Testing</p>
+                        </div>
+                        <div class="col">
+                            <h3>RPA</h3>
+                            <p>Implementation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/typingeffect.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $('.toggle-bar').on('click', function (event) {
+        $('this').toggleClass('open');
+        $('.navigation-bar').slideToggle('200');
+    })
+</script>
+
+</html>

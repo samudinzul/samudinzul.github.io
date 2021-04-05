@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+</head>
+
+<body>
+    <div class="portfolio-main">
+        <!-- Header -->
+        <header>
+            <div class="container-work">
+                <nav class="nav-work">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
+                    </div>
+                    <!-- toggle bar -->
+                    <div class="toggle-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="navigation-bar">
+                        <ul>
+                          <li><a href="contact.html">contact</a></li>
+                          <li><a href="skills.html">skills</a></li>
+                          <li><a href="#">my work</a></li>
+                          <li class="hire-btn"><a target="popup" href="https://resume.io/r/jfgMpOhGb">resume</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <center>
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')">ALL</button>
+          <button class="btn" onclick="filterSelection('crud')">CRUD</button>
+          <button class="btn" onclick="filterSelection('ecommerce')">E-COMMERCE</E-Commerce></button>
+          <button class="btn" onclick="filterSelection('api')">API</button>
+          <button class="btn" onclick="filterSelection('webdesign')">WEB DESIGN</button>
+          <button class="btn" onclick="filterSelection('mobiledev')">MOBILE DEV</button>
+          
+        </div>
+      </center>
+
+
+        <!-- List-->
+       <div class="container">
+         <!-- Portfolio Gallery Grid .btn:hover {opacity: 1}-->
+<div class="row">
+  <div class="column crud" data-toggle="modal" data-target="#bugtrackermodal">
+    <div class="content">
+      <img src="assets/images/bugtracker-1.png" alt="Bug Tracker" style="width:100%;height: 100%;">
+      <h4>Bug Tracker</h4>
+      <p>Category: CRUD</p>
+    </div>
+  </div>
+  <div class="column webdesign"data-toggle="modal" data-target="#portfoliov1modal">
+    <div class="content">
+    <img src="assets/images/portfoliov1-1.png" alt="Portfolio-v1" style="width:100%">
+      <h4>Portfolio v1</h4>
+      <p>Category: Web Design</p>
+    </div>
+  </div>
+  <div class="column webdesign api" data-toggle="modal" data-target="#portfoliomodal">
+    <div class="content">
+    <img src="assets/images/portfoliov2-1.png" alt="Portfolio" style="width:100%;height: 100%;">
+      <h4>Portfolio</h4>
+      <p>Category: Web Design, API</p>
+    </div>
+  </div>
+  <div class="column crud ecommerce"data-toggle="modal" data-target="#invivemodal">
+    <div class="content">
+      <img src="assets/images/invive-1.png" alt="Invive" style="width:100%;height: 100%;">
+      <h4>Invive</h4>
+      <p>Category: CRUD, E-Commerce</p>
+    </div>
+  </div>
+  <div class="column crud ecommerce"data-toggle="modal" data-target="#szshopmodal">
+    <div class="content">
+      <img src="assets/images/szshop-1.png" alt="SZ Shop" style="width:100%;height: 100%;">
+      <h4>SZ Shop</h4>
+      <p>Category: CRUD, E-Commerce</p>
+    </div>
+  </div>
+  <div class="column mobiledev api" data-toggle="modal" data-target="#parkingmarkermodal">
+    <div class="content">
+      <img src="assets/images/parkingmarker-1.jpg" alt="Parking Marker" style="width:100%;height:100%;"/>
+      <h4>Parking Marker</h4>
+      <p>Category: Mobile Dev, API</p>
+    </div>
+  </div>
+  <div class="column mobiledev crud" data-toggle="modal" data-target="#journalmodal">
+    <div class="content">
+      <img src="assets/images/journal-1.jpg" alt="Parking Marker" style="width:100%;height:100%;"/>
+      <h4>Journal App</h4>
+      <p>Category: Mobile Dev, CRUD</p>
+    </div>
+  </div>
+  
+<!-- END GRID -->
+</div>
+
+          </div>
+        
+ 
+    
+</div>
+
+    <!-- Toggling modal -->
+    <div id="bugtracker_modal"></div>
+    <div id="portfoliov1_modal"></div>
+    <div id="portfolio_modal"></div>
+    <div id="invive_modal"></div>
+    <div id="szshop_modal"></div>
+    <div id="parkingmarker_modal"></div>
+    <div id="journal_modal"></div>
+<script src="assets/js/jquery.min.js"></script>
+<script> 
+
+$(function(){
+      $("#bugtracker_modal").load("include_html/bugtracker_modal.html"); 
+      $("#portfoliov1_modal").load("include_html/portfoliov1_modal.html"); 
+      $("#portfolio_modal").load("include_html/portfolio_modal.html"); 
+      $("#invive_modal").load("include_html/invive_modal.html"); 
+      $("#szshop_modal").load("include_html/szshop_modal.html"); 
+      $("#parkingmarker_modal").load("include_html/parkingmarker_modal.html");
+      $("#journal_modal").load("include_html/journal_modal.html");
+    });
+</script>
+
+</body>
+
+<script src="assets/js/filter.js"></script>
+<script>
+    $('.toggle-bar').on('click', function (event) {
+        $('this').toggleClass('open');
+        $('.navigation-bar').slideToggle('200');
+    })
+</script>
+
+
+
+
+</html>
+

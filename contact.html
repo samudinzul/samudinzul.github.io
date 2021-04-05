@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></head>
+
+<body>
+    <div class="portfolio-main">
+        <!-- Header -->
+        <header>
+            <div class="container-work">
+                <nav class="nav-work">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
+                    </div>
+                    <!-- toggle bar -->
+                    <div class="toggle-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="navigation-bar">
+                        <ul>
+                          <li><a href="#">contact</a></li>
+                          <li><a href="skills.html">skills</a></li>
+                          <li><a href="work.html">my work</a></li>
+                          <li class="hire-btn"><a target="popup" href="https://resume.io/r/jfgMpOhGb">resume</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- main content -->
+
+        <div class="main-content">
+            <div class="container">
+        <div class="experience-section">
+            <div class="experience-inner1">
+                <div class="col">
+                    <h3>Email: <i class="fab fa-linkedin"></i></h3>
+                    <p>samudinzul@gmail.com</p>
+                </div>
+                <div class="col">
+                    <h3>Contact Number:</h3>
+                    <p>+60 194286463</p>
+                </div>
+                <div class="col">
+                    <h3>Facebook: </h3>
+                    <a href="https://www.facebook.com/a.syahir.a.zulkifli"><p>https://www.facebook.com/a.syahir.a.zulkifli</p></a>
+                </div>
+                <div class="col">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/syahir-aisamuddin-zulkifli-496642156/" action=><p>https://www.linkedin.com/in/syahir-aisamuddin-zulkifli-496642156/</p></a>
+                </div>
+                <div class="col">
+                    <h3>Github</h3>
+                    <a href="https://github.com/samudinzul"><p>https://github.com/samudinzul</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $('.toggle-bar').on('click', function (event) {
+        $('this').toggleClass('open');
+        $('.navigation-bar').slideToggle('200');
+    })
+</script>
+    
+</html>
+
